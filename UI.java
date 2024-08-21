@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Scanner;
 
 public class UI {
@@ -43,6 +44,17 @@ public class UI {
     }
 
     public void delete(){
+        Scanner Teclado = new Scanner(System.in);
+        int posicao;
+        try {
+            showNormalRoll();
+            System.out.print("Digite qual posicao deseja remover: ");
+            posicao = Teclado.nextInt();
+            Controller.remove(posicao);
+        } catch (Exception e){
+            e.printStackTrace();
+            System.out.println("Algo deu errado");
+        }
         System.out.println("Esta em desenvolvimento ainda");
     }
 
